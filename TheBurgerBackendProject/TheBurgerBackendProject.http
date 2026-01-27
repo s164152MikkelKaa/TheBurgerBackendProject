@@ -1,0 +1,6 @@
+@TheBurgerBackendProject_HostAddress = http://localhost:5082
+
+GET {{TheBurgerBackendProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
