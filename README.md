@@ -2,7 +2,7 @@
 
 ## Brainstorm på Framework
 * EntityFramework
-* AspNetCore Identity
+* Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.2
 * SQL server
 * Angular
 * API (Restfull?)
