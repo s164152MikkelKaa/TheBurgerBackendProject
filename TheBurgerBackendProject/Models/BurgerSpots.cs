@@ -18,9 +18,9 @@ namespace TheBurgerBackendProject.Models
         public double CoordinateLon { get; set; }
         [MaxLength(500)]
         public string? OpenTimes { get; set; }
-        public DateTime LastEditAt { get; set; }
-        public string? IdentityUserId { get; set; }
-        [ForeignKey("IdentityUserId")]
-        public IdentityUser? UserId { get; set; }
+        public DateTime LastEditAt { get; set; } = DateTime.UtcNow;
+        public string? LastEditBy { get; set; }
+        [ForeignKey("LastEditBy")]
+        public IdentityUser? User { get; set; }
     }
 }
