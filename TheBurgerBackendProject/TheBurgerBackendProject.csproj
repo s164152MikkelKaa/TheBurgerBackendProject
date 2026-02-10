@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	<SpaRoot>..\TheBurgerFrontend</SpaRoot>
 	<SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
-	<SpaProxyServerUrl>https://localhost:65164</SpaProxyServerUrl>
+	<SpaProxyServerUrl>https://localhost:65351</SpaProxyServerUrl>
   </PropertyGroup>
 
   <ItemGroup>

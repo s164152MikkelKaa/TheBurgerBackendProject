@@ -22,24 +22,24 @@ erDiagram
     CoordinateLon DECIMAL(18_14) "NOTNULL"
     OpenTimes NVARCHAR(500) "NULL"
     LastEditAt DATETIME2 "NOTNULL"
-    LastEditBy INT FK "FOREIGNKEY(UserProfile, Id) NULL"
+    LastEditBy NVARCHAR(450) FK "FOREIGNKEY(IdentityUser, Id) NULL"
   }
   UserReview {
     Id INT PK "IDENTITY(1, 1)"
     SpotId INT FK "FOREIGNKEY(BurgerSpots, Id) NOTNULL"
-    UserId INT FK "FOREIGNKEY(UserProfile, Id) NULL"
+    UserId NVARCHAR(450) FK "FOREIGNKEY(IdentityUser, Id) NULL"
     CreatedAt DATETIME2 "NOTNULL"
     LastEditAt DATETIME2 "NOTNULL"
-    Score FLOAT(53) "NULL"
+    Score DECIMAL(2_1) "NULL"
     ReviewText NVARCHAR(2000) "NULL"
-    PictureLocation NVARCHAR(500) "NULL"
+    PictureName NVARCHAR(500) "NULL"
   }
   BurgerSpots ||--o{ UserReview : review_of
-  UserProfile {
-    Id INT PK "IDENTITY(1, 1)"
+  IdentityUser {
+    Id NVARCHAR(450) PK
   }
-  BurgerSpots }o--o| UserProfile : last_edit_by
-  UserReview }o--o| UserProfile : owned
+  BurgerSpots }o--o| IdentityUser : last_edit_by
+  UserReview }o--o| IdentityUser : owned
 ~~~
 
 ## Noter på tanker/Logbog for tanker
