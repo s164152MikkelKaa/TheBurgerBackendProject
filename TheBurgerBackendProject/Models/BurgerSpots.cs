@@ -13,9 +13,9 @@ namespace TheBurgerBackendProject.Models
         [MaxLength(200)]
         public string SpotAddress { get; set; }
         [Column(TypeName = "decimal(18,14)")]
-        public double CoordinateLat { get; set; }
+        public decimal CoordinateLat { get; set; }
         [Column(TypeName = "decimal(18,14)")]
-        public double CoordinateLon { get; set; }
+        public decimal CoordinateLon { get; set; }
         [MaxLength(500)]
         public string? OpenTimes { get; set; }
         public DateTime LastEditAt { get; set; } = DateTime.UtcNow;
@@ -23,4 +23,11 @@ namespace TheBurgerBackendProject.Models
         [ForeignKey("LastEditBy")]
         public IdentityUser? User { get; set; }
     }
+
+    /*
+     * Note:
+     * CoordinateLat og CoordinateLon blev ændret fra double til decimal (på C# siden), grundet: se UserReview.cs [NRefVal = 1]
+     * 
+     * ("NRefVal" Note Reference Value)
+    // */
 }

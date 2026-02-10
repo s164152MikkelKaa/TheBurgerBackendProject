@@ -1,6 +1,7 @@
-using TheBurgerBackendProject.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TheBurgerBackendProject.Data;
+using TheBurgerBackendProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,6 +46,9 @@ builder.Services.AddAuthentication()
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
         options.SlidingExpiration = true;
     });
+
+builder.Services.AddScoped<IBurgerSpotsService, BurgerSpotsService>();
+builder.Services.AddScoped<IUserReviewService, UserReviewService>();
 
 var app = builder.Build();
 
