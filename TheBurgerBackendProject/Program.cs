@@ -49,6 +49,7 @@ builder.Services.AddAuthentication()
 
 builder.Services.AddScoped<IBurgerSpotsService, BurgerSpotsService>();
 builder.Services.AddScoped<IUserReviewService, UserReviewService>();
+builder.Services.AddScoped<IAccountStateService, AccountStateService>();
 
 var app = builder.Build();
 
