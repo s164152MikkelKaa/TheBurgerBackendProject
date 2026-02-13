@@ -1,0 +1,4 @@
+1.
+Fejl: Kan ikke loade frontend projektet "The SDK 'Microsoft.VisualStudio.JavaScript.Sdk/1.0.3864779' specified could not be found." efter en opdatering af Visual Studio.
+Note: I NuGet manageren eksistere den angivende version ikke.
+Fix: (?) Rediger TheBurgerFrontend.esproj med Notepad++ til version 1.0.4671869 ("Latest stable") og genloade projektet.
